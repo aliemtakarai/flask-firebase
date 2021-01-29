@@ -13,3 +13,4 @@ https://youtu.be/agVNm0ngtLk
 
 1. Flask
 2. Python-dotenv
+3. Pyrebase (https://github.com/thisbejim/Pyrebase)
