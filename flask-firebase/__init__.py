@@ -1,9 +1,18 @@
 import os
 
 import flask
+import pyrebase
 from flask import render_template
 
 app = flask.Flask(__name__)
+
+# firebase config
+config = {
+    "databaseURL": app.config.get('firebase_database_url'),
+    "serviceAccount": app.config.get('firebase_credential')
+}
+
+firebase = pyrebase.initialize_app(config)
 
 def create_app():
     app = Flask(__name__)
