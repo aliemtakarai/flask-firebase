@@ -3,5 +3,12 @@
     <div class="starter-template text-center py-5 px-3">
         <h1>List Post Data</h1>
         <a href="/create-post" class="btn btn-primary">Create Post</a>
+        {% for item in data.each() %}
+            <li>
+                Title : {{ item.val().title }} <br>
+                Description : {{ item.val().description }}
+                <a href="/delete-post?data={{ item.key() }}">Hapus</a>
+            </li>
+        {% endfor %}
     </div>
 {% endblock %}

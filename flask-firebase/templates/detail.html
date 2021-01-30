@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="starter-template text-center py-5 px-3">
+        <h1>Detail Data</h1>
+        {% for item in data.each() %}
+            <li>
+                {{ item.val().title }} <a href="/?data={{ item.key() }}">Detail</a> || <a href="/delete-post?data={{ item.key() }}">Hapus</a>
+            </li>
+        {% endfor %}
+    </div>
+{% endblock %}
